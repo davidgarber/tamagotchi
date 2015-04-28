@@ -28,16 +28,28 @@ class Tamagotchi
     if time >= 12
     @food_level = @food_level.-1
     @foodlevel
+
+    # @sleep_level = @sleep_level.-1
+    # @sleep_level
     end
+
   end
 
-  define_method(:is_alive?) do
-    if @food_level > 0
-      true
+  define_method(:is_alive) do
+    if @food_level > 1
+      "I'm alive!"
     else
-      "I'm dead."
+      "I'm dead. :("
     end
   end
 
+  define_method(:set_food_level) do |user_food|
+  @food_level = user_food
+end
+
+  define_method(:sleep) do
+    @sleep_level = @sleep_level.+1
+    @sleep_level
+  end
 
 end
