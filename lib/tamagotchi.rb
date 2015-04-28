@@ -29,8 +29,8 @@ class Tamagotchi
     @food_level = @food_level.-1
     @foodlevel
 
-    # @sleep_level = @sleep_level.-1
-    # @sleep_level
+    @sleep_level = @sleep_level.-1
+    @sleep_level
     end
 
   end
@@ -43,13 +43,18 @@ class Tamagotchi
     end
   end
 
-  define_method(:set_food_level) do |user_food|
-  @food_level = user_food
-end
+#   define_method(:set_food_level) do
+#   @food_level = user_food
+# end
 
   define_method(:sleep) do
     @sleep_level = @sleep_level.+1
     @sleep_level
+  end
+
+  define_method(:eat) do
+    @food_level = @food_level.+1
+    @food_level
   end
 
 end
